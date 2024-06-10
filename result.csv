@@ -1,0 +1,41 @@
+model_name,job_title,best_job_title,best_score,cleaned_job_title,best_cleaned_job_title,current_date
+all-MiniLM-L6-v2,Senior Backend Engineer,Back-end Engineer,0.934730052947998,Backend,Back-end,2024-06-10 16:09:56
+all-MiniLM-L6-v2,Senior Frontend Engineer,Front-end Engineer,0.9524986743927002,Frontend,Front-end,2024-06-10 16:09:57
+all-MiniLM-L6-v2,Java Developer,AI Engineer,0.9404780864715576,Java,AI,2024-06-10 16:09:58
+all-MiniLM-L6-v2,Python Engineer,AI Engineer,0.9405581951141357,Python,AI,2024-06-10 16:09:59
+all-MiniLM-L6-v2,Data Scientist,Data Scientist,1.0000004768371582,Data Scientist,Data Scientist,2024-06-10 16:10:00
+all-MiniLM-L6-v2,UI Designer,Visual Designer,0.9512521624565125,UI Designer,Visual Designer,2024-06-10 16:10:01
+all-MiniLM-L6-v2,Cloud Security Engineer,Cloud Security Engineer,1.0000003576278687,Cloud Security,Cloud Security,2024-06-10 16:10:02
+all-MiniLM-L6-v2,Manual Tester,Manual Tester,1.0000007152557373,Manual Tester,Manual Tester,2024-06-10 16:10:03
+all-MiniLM-L6-v2,Agile Coach,Agile Coach,1.0000007152557373,Agile Coach,Agile Coach,2024-06-10 16:10:04
+all-MiniLM-L6-v2,Software Project Manager,Software Project Manager,1.0000007152557373,Software Project,Software Project,2024-06-10 16:10:05
+all-MiniLM-L6-v2,QA Engineer,QA QC Engineer,0.9659354090690613,QA,QA QC,2024-06-10 16:10:06
+all-MiniLM-L6-v2,Product Owner,Product Owner,1.0000011920928955,Product Owner,Product Owner,2024-06-10 16:10:07
+all-MiniLM-L6-v2,Machine Learning Engineer,Machine Learning Engineer,1.0000001192092896,Machine Learning,Machine Learning,2024-06-10 16:10:08
+
+all-MiniLM-L6-v2,Senior Backend Engineer,DevOps Engineer,0.9445632696151733,Backend Engineer,DevOps Engineer,2024-06-10 16:28:28
+all-MiniLM-L6-v2,Senior Frontend Engineer,Front-end Engineer,0.947144091129303,Frontend Engineer,Front-end Engineer,2024-06-10 16:28:29
+all-MiniLM-L6-v2,Java Developer,Game Designer,0.9255843758583069,Java Developer,Game Designer,2024-06-10 16:28:30
+all-MiniLM-L6-v2,Python Engineer,AI Engineer,0.9604493379592896,Python Engineer,AI Engineer,2024-06-10 16:28:30
+all-MiniLM-L6-v2,Data Scientist,Data Scientist,1.0000004768371582,Data Scientist,Data Scientist,2024-06-10 16:28:31
+all-MiniLM-L6-v2,UI Designer,Visual Designer,0.9512521624565125,UI Designer,Visual Designer,2024-06-10 16:28:33
+all-MiniLM-L6-v2,Cloud Security Engineer,Cloud Security Engineer,1.0000003576278687,Cloud Security Engineer,Cloud Security Engineer,2024-06-10 16:28:34
+all-MiniLM-L6-v2,Manual Tester,Manual Tester,1.0000007152557373,Manual Tester,Manual Tester,2024-06-10 16:28:35
+all-MiniLM-L6-v2,Agile Coach,Agile Coach,1.0000007152557373,Agile Coach,Agile Coach,2024-06-10 16:28:36
+all-MiniLM-L6-v2,Software Project Manager,Software Project Manager,1.0000007152557373,Software Project Manager,Software Project Manager,2024-06-10 16:28:37
+all-MiniLM-L6-v2,QA Engineer,QA QC Engineer,0.9519571661949158,QA Engineer,QA QC Engineer,2024-06-10 16:28:38
+all-MiniLM-L6-v2,Product Owner,Product Owner,1.0000011920928955,Product Owner,Product Owner,2024-06-10 16:28:39
+all-MiniLM-L6-v2,Machine Learning Engineer,Machine Learning Engineer,1.0000007152557373,Machine Learning Engineer,Machine Learning Engineer,2024-06-10 16:28:40
+all-MiniLM-L6-v2,Senior Backend Engineer,DevOps Engineer,0.9445632696151733,Backend Engineer,DevOps Engineer,2024-06-10 16:38:34
+all-MiniLM-L6-v2,Senior Frontend Engineer,Front-end Engineer,0.947144091129303,Frontend Engineer,Front-end Engineer,2024-06-10 16:38:35
+all-MiniLM-L6-v2,Java Developer,Game Designer,0.9255843758583069,Java Developer,Game Designer,2024-06-10 16:38:36
+all-MiniLM-L6-v2,Python Engineer,AI Engineer,0.9604493379592896,Python Engineer,AI Engineer,2024-06-10 16:38:37
+all-MiniLM-L6-v2,Data Scientist,Data Scientist,1.0000004768371582,Data Scientist,Data Scientist,2024-06-10 16:38:38
+all-MiniLM-L6-v2,UI Designer,Visual Designer,0.9512521624565125,UI Designer,Visual Designer,2024-06-10 16:38:39
+all-MiniLM-L6-v2,Cloud Security Engineer,Cloud Security Engineer,1.0000003576278687,Cloud Security Engineer,Cloud Security Engineer,2024-06-10 16:38:40
+all-MiniLM-L6-v2,Manual Tester,Manual Tester,1.0000007152557373,Manual Tester,Manual Tester,2024-06-10 16:38:41
+all-MiniLM-L6-v2,Agile Coach,Agile Coach,1.0000007152557373,Agile Coach,Agile Coach,2024-06-10 16:38:42
+all-MiniLM-L6-v2,Software Project Manager,Software Project Manager,1.0000007152557373,Software Project Manager,Software Project Manager,2024-06-10 16:38:43
+all-MiniLM-L6-v2,QA Engineer,QA QC Engineer,0.9519571661949158,QA Engineer,QA QC Engineer,2024-06-10 16:38:44
+all-MiniLM-L6-v2,Product Owner,Product Owner,1.0000011920928955,Product Owner,Product Owner,2024-06-10 16:38:45
+all-MiniLM-L6-v2,Machine Learning Engineer,Machine Learning Engineer,1.0000007152557373,Machine Learning Engineer,Machine Learning Engineer,2024-06-10 16:38:46

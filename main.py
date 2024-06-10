@@ -1,6 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModel
 from sklearn.metrics.pairwise import cosine_similarity
+import datetime
 
 # Define standard job title table
 job_title_table = [
@@ -47,7 +48,9 @@ job_title_table = [
 
 # Define stop words
 stop_words = ["senior", "fresher", "junior", "middle", "intern", "sr", "jr",
-              "fr", "expert", "level", "associate", "developer", "engineer", "manager"]
+              "fr", "expert", "level", "associate"]#, "developer", "engineer", "manager"]
+
+model_name = 'all-MiniLM-L6-v2'
 
 # Create a function to clean job titles
 def clean_job_title(job_title, stop_words):
@@ -62,10 +65,10 @@ def calculate_similarity(job_title, job_title_table):
     tokenizer = AutoTokenizer.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
     model = AutoModel.from_pretrained('sentence-transformers/all-MiniLM-L6-v2')
     cleaned_job_title_table = clean_job_title_table(job_title_table, stop_words)
-    job_title = clean_job_title(job_title, stop_words)
+    cleaned_job_title = clean_job_title(job_title, stop_words)
 
     # Tokenize the job title
-    job_title_tokens = tokenizer.encode(job_title, add_special_tokens=True,
+    job_title_tokens = tokenizer.encode(cleaned_job_title, add_special_tokens=True,
                                         truncation=True, max_length=128, padding='max_length', return_tensors='pt')
 
     # Tokenize the job title table
@@ -84,18 +87,25 @@ def calculate_similarity(job_title, job_title_table):
     # Calculate the cosine similarity between the job title and each job title in the table
     similarity_scores = cosine_similarity(job_title_embeddings, job_title_table_embeddings)
 
+    # Store all the scores in a dictionary with the job title as the key
+    similarity_scores_dict = {job_title: score for job_title, score in zip(job_title_table, similarity_scores[0])}
+
     # Find the best similarity score
     best_score = similarity_scores.max()
 
     # Return the standard job title with the best similarity score
     best_index = similarity_scores.argmax()
+    best_cleaned_job_title = cleaned_job_title_table[best_index]
     best_job_title = job_title_table[best_index]
 
-    return best_job_title, best_score
+    return cleaned_job_title, best_cleaned_job_title, best_job_title, best_score, similarity_scores_dict
 
 def test_calculate_similarity():
     test_cases = [
         'Senior Backend Engineer',
+        "Senior Frontend Engineer",
+        "Java Developer",
+        "Python Engineer",
         'Data Scientist',
         'UI Designer',
         'Cloud Security Engineer',
@@ -108,8 +118,17 @@ def test_calculate_similarity():
     ]
 
     for job_title in test_cases:
-        best_job_title, best_score = calculate_similarity(job_title, job_title_table)
-        print(f"The similarity score for '{job_title}' is {best_job_title} with {best_score}")
+        cleaned_job_title, best_cleaned_job_title, best_job_title, best_score, similarity_scores_dict = calculate_similarity(job_title, job_title_table)
+        print(f"The similarity score for '{job_title}' is {best_job_title} with {best_score}, clean job title is {cleaned_job_title} and best cleaned job title is {best_cleaned_job_title}")
+        # Add current date to the result
+        current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # Write out a csv file with the results
+        with open('result.csv', 'a') as f:
+            f.write(f"{model_name},{job_title},{best_job_title},{best_score},{cleaned_job_title},{best_cleaned_job_title},{current_date}\n")
+        # store the similarity scores in a csv file
+        with open('similarity_scores.csv', 'a') as f:
+            for job_title, score in similarity_scores_dict.items():
+                f.write(f"{model_name},{cleaned_job_title},{job_title},{score},{current_date}\n")
 
 if __name__ == '__main__':
     test_calculate_similarity()
